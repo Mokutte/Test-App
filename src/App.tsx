@@ -64,7 +64,7 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <p>Онлаин-косультация</p>
+        <p>Онлаин-консультация</p>
         <p className="header_price">1200₽</p>
       </header>
       <div className="main">
@@ -85,11 +85,12 @@ function App() {
                 value={startDay.format("D.MM")}
                 name="day_check"
                 className="day_btn"
-                onChange={() =>
+                onChange={() => {
                   setSelectDay(
                     moment(startDay).subtract(1, "day").format("D.MM")
-                  )
-                }
+                  );
+                  setSelectTime("");
+                }}
               ></input>
             </label>
             <label
@@ -107,7 +108,7 @@ function App() {
                 value={startDay.format("D.MM")}
                 name="day_check"
                 className="day_btn"
-                onChange={() => setSelectDay(startDay.format("D.MM"))}
+                onChange={() => {setSelectDay(startDay.format("D.MM")); setSelectTime("");}}
               ></input>
             </label>
             {daysArray.map((el: any) => (
@@ -125,7 +126,7 @@ function App() {
                   value={el}
                   name="day_check"
                   className="day_btn"
-                  onChange={() => setSelectDay(el)}
+                  onChange={() => {setSelectDay(el); setSelectTime("");}}
                 ></input>
               </label>
             ))}
