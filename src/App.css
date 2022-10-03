@@ -1,38 +1,160 @@
 .App {
-  text-align: center;
+  width: 650px;
+  margin: auto;
+  color: #fff;
+  margin-top: 60px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.261);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  border-radius: 10px 10px 0px 0px;
+  background-color: #69c72f;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.header_price {
+  font-size: 26px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main {
+  padding: 20px;
+}
+
+.day_scroll {
+  overflow: scroll;
+}
+
+.day_scroll::-webkit-scrollbar {
+  width: 0;
+}
+
+.day_block {
+  height: 70px;
+  width: 710%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(192, 192, 192);
+}
+
+.day_btn {
+  display: none;
+}
+
+.day_all {
+  width: 130px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.lable_input {
+  color: rgb(0, 0, 0);
+  width: 130px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: 1px solid rgb(192, 192, 192);
+  cursor: pointer;
+}
+
+.lable_input_active {
+  color: rgb(255, 255, 255);
+  width: 130px;
+  background-color: rgb(61, 114, 228);
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: 1px solid rgb(192, 192, 192);
+  cursor: pointer;
+}
+
+.lable_input:hover {
+  background-color: rgb(224, 224, 224);
+}
+
+.hour_lable {
+  color: rgb(0, 0, 0);
+  width: 98%;
+  height: 70px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid rgb(192, 192, 192);
+  cursor: pointer;
+  margin: auto;
+  transition: 200ms;
+}
+
+.hour_block {
+  width: 100%;
+  display: grid;
+  padding-bottom: 20px;
+  overflow-y: scroll;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 10px;
+}
+
+.hour_lable_active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(61, 114, 228);
+  border-radius: 5px;
+  height: 70px;
+  font-size: 20px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: 1px solid rgb(192, 192, 192);
+  cursor: pointer;
+}
+
+.hour_lable:hover {
+  background-color: rgb(224, 224, 224);
+}
+
+.hour_btn {
+  display: none;
+}
+
+.button_submit {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  font-size: 20px;
+  border-radius: 5px;
+  color: rgb(61, 61, 61);
+  border: 1px solid rgb(62, 62, 62);
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.button_submit:active {
+  background-color: rgb(61, 61, 61);
+  color: #fff;
+}
+
+.show_btn {
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid rgb(192, 192, 192);
+  padding: 8px;
+  font-size: 30px;
 }
